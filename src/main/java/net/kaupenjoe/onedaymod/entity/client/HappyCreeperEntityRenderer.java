@@ -6,16 +6,16 @@ import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.entity.mob.CreeperEntity;
 import net.minecraft.util.Identifier;
 
-public class FakeLoveCreeperEntityRenderer extends CreeperEntityRenderer {
-    private static final Identifier FAKE_TEXTURE = new Identifier(OneDayMod.MOD_ID, "textures/entity/fake_love_creeper.png");
+public class HappyCreeperEntityRenderer extends CreeperEntityRenderer {
+    private static final Identifier FAKE_TEXTURE = new Identifier("textures/entity/minecraft_creeper.png");
     private static final Identifier TEXTURE = new Identifier("textures/entity/creeper/creeper.png");
 
-    public FakeLoveCreeperEntityRenderer(EntityRendererFactory.Context context) {
+    public HappyCreeperEntityRenderer(EntityRendererFactory.Context context) {
         super(context);
     }
 
     public Identifier getTexture(CreeperEntity creeperEntity) {
-        if(creeperEntity.currentFuseTime > 15) {
+        if(creeperEntity.currentFuseTime > 100) {
             return TEXTURE;
         } else {
             return FAKE_TEXTURE;

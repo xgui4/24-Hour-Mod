@@ -51,6 +51,10 @@ public class ModEntities {
             FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, WaterCreeperEntity::new)
                     .dimensions(EntityDimensions.fixed(0.6F, 1.7F)).build());
 
+    public static final EntityType<WaterCreeperEntity> HAPPY_CREEPER = Registry.register(Registries.ENTITY_TYPE,
+        new Identifier(OneDayMod.MOD_ID, "happy_creeper"),
+        FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, WaterCreeperEntity::new)
+                .dimensions(EntityDimensions.fixed(0.6F, 1.7F)).build());
 
     public static void registerModEntities() {
         OneDayMod.LOGGER.info("Registering Mod Entities for " + OneDayMod.MOD_ID);

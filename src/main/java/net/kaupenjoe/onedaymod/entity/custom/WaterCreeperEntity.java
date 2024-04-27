@@ -1,16 +1,11 @@
 package net.kaupenjoe.onedaymod.entity.custom;
 
 import net.kaupenjoe.onedaymod.sound.ModSounds;
-import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.entity.AreaEffectCloudEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnReason;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.CreeperEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemUsageContext;
 import net.minecraft.particle.*;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
@@ -18,12 +13,8 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
-
-import java.util.Collection;
 import java.util.Iterator;
-import java.util.List;
 
 public class WaterCreeperEntity extends CreeperEntity {
     private int explosionRadius = 4;
@@ -32,6 +23,7 @@ public class WaterCreeperEntity extends CreeperEntity {
         super(entityType, world);
     }
 
+    @SuppressWarnings("resource")
     @Override
     protected void explode() {
         if (!this.getWorld().isClient) {

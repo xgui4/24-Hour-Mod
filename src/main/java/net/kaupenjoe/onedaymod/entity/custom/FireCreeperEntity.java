@@ -4,8 +4,6 @@ import net.kaupenjoe.onedaymod.sound.ModSounds;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnReason;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.CreeperEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.ParticleEffect;
@@ -16,11 +14,9 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
 
 import java.util.Iterator;
-import java.util.List;
 
 public class FireCreeperEntity extends CreeperEntity {
     private int explosionRadius = 4;
@@ -29,6 +25,7 @@ public class FireCreeperEntity extends CreeperEntity {
         super(entityType, world);
     }
 
+    @SuppressWarnings("resource")
     @Override
     protected void explode() {
         if (!this.getWorld().isClient) {
@@ -84,6 +81,7 @@ public class FireCreeperEntity extends CreeperEntity {
         }
     }
 
+    @SuppressWarnings("unused")
     private void spawnParticleBlanket(BlockPos positionClicked, ParticleEffect type, int count) {
         for(int i = 0; i < 20; i++) {
             ServerWorld world = ((ServerWorld) this.getWorld());

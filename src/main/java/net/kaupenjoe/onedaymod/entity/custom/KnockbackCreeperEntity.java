@@ -1,13 +1,9 @@
 package net.kaupenjoe.onedaymod.entity.custom;
 
 import net.kaupenjoe.onedaymod.sound.ModSounds;
-import net.minecraft.block.Blocks;
-import net.minecraft.entity.AreaEffectCloudEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.SpawnReason;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.CreeperEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.ParticleTypes;
@@ -16,13 +12,9 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
-
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
 
 public class KnockbackCreeperEntity extends CreeperEntity {
@@ -32,6 +24,7 @@ public class KnockbackCreeperEntity extends CreeperEntity {
         super(entityType, world);
     }
 
+    @SuppressWarnings("resource")
     @Override
     protected void explode() {
         if (!this.getWorld().isClient) {

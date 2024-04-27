@@ -32,5 +32,6 @@ public class OneDayMod implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(ModEntities.LOVE_CREEPER, CreeperEntity.createCreeperAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.SNOW_CREEPER, CreeperEntity.createCreeperAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.WATER_CREEPER, CreeperEntity.createCreeperAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.HAPPY_CREEPER, CreeperEntity.createCreeperAttributes());
 	}
 }

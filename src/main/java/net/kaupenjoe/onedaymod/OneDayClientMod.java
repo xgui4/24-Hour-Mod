@@ -4,6 +4,7 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.kaupenjoe.onedaymod.entity.ModEntities;
 import net.kaupenjoe.onedaymod.entity.client.*;
+import net.kaupenjoe.onedaymod.entity.custom.HappyCreeperEntity;
 
 public class OneDayClientMod implements ClientModInitializer {
     @Override
@@ -16,5 +17,6 @@ public class OneDayClientMod implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.LOVE_CREEPER, LoveCreeperEntityRenderer::new);
         EntityRendererRegistry.register(ModEntities.SNOW_CREEPER, SnowCreeperEntityRenderer::new);
         EntityRendererRegistry.register(ModEntities.WATER_CREEPER, WaterCreeperEntityRenderer::new);
+        EntityRendererRegistry.register(ModEntities.HAPPY_CREEPER, HappyCreeperEntityRenderer::new);
     }
 }

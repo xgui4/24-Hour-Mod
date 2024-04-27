@@ -2,7 +2,6 @@ package net.kaupenjoe.onedaymod.entity.custom;
 
 import net.kaupenjoe.onedaymod.sound.ModSounds;
 import net.minecraft.entity.AreaEffectCloudEntity;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -15,7 +14,6 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
 
@@ -30,6 +28,7 @@ public class LoveCreeperEntity extends CreeperEntity {
         super(entityType, world);
     }
 
+    @SuppressWarnings("resource")
     @Override
     protected void explode() {
         if (!this.getWorld().isClient) {
